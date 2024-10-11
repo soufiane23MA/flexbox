@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: poppins;
+}
+#container{
+	display: flex; 
+	/* flex-wrap sinon on utilisera media@*/
+	flex-wrap: wrap;
+	min-height: 100vh;
+	background-color: rgba(68, 117, 136, 0.548); 
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.card {
+	background:#fff;
+	width: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	transition: 0.5s;
+}
+.card:hover{
+	transform: translateY(-20px);
+	/*valeure negative pour un mouvement sur cross axis(y),
+	valeur positive pour le main axis (x)*/
+
+}.card:hover .coeur{
+	left: 0px;
+}
+
+.card-header{
+	position:relative;
+	height: 200px;
+	/*border-radius: 10px 10px;*/
+	 
+
+}
+/* il ne faut pas d'espace entre img et :hover*/
+.card:hover .card-header img{
+	transform: scale(1.1);
+  filter: grayscale(0);
+}
+.card-text{
+	padding: 30px; 
+
+}
+
+.card-text h1{
+	font-size: 25px;
+	margin-bottom: 10px;
+	font-weight: 600;
+
+}
+.card-text p{
+	font-size:14px ;
+	color:rgb(147, 147, 147);
+	font-weight: 600;
+}
+.card-header img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: grayscale(1);
+	transition: 0.5s;
+	border-radius: 10px 10px 0 0;
+
+}
+  
+.coeur{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+	left: -50px;
+	font-size: 15px;
+	transition: 0.5;
+
+}
+.coeur a {
+		color: #fff;
+}
+ 
+
